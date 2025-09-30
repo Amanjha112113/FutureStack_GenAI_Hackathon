@@ -1,0 +1,100 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.chat-container {
+    width: 90%;
+    max-width: 450px;
+    height: 700px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f7f7f7;
+}
+h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+#status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #bbb;
+    transition: background-color 0.3s;
+}
+.chat-window {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.message {
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 18px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+.agent {
+    background-color: #e9e9eb;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+.user {
+    background-color: #007aff;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+.controls {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #eee;
+    background: #f7f7f7;
+}
+#token-input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+#connect-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #34c759;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#connect-button:hover {
+    transform: scale(1.1);
+}
+#connect-button.disconnect {
+    background-color: #ff3b30;
+}

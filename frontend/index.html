@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Marketing Consultant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="header">
+            <h2>AI Marketing Consultant</h2>
+            <div id="status-indicator"></div>
+        </div>
+        <div class="chat-window" id="chat-window">
+            <div class="message agent">Hi! Please enter your name and click the call button to begin.</div>
+        </div>
+        <div class="controls">
+            <input type="text" id="name-input" placeholder="Enter Your Name">
+            <button id="connect-button" title="Start/Stop Call">
+                <span id="button-icon">📞</span>
+            </button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/livekit-client@2.1.3/dist/livekit-client.umd.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
