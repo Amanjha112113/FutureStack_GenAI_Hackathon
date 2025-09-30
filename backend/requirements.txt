@@ -1,0 +1,6 @@
+livekit-agents[cartesia,silero,openai]
+python-dotenv
+fastapi
+uvicorn
+livekit-server-sdk
+python-multipart
