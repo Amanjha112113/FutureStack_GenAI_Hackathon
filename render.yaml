@@ -1,4 +1,3 @@
-%%writefile ai_marketing_consultant/render.yaml
 services:
   - type: web
     name: ai-marketing-consultant
