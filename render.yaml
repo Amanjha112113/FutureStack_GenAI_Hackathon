@@ -1,11 +1,11 @@
+%%writefile ai_marketing_consultant/render.yaml
 services:
-  # The Web Service for generating tokens
   - type: web
-    name: ai-agent-server
+    name: ai-marketing-consultant
     env: python
     rootDir: backend
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "uvicorn server:app --host 0.0.0.0 --port $PORT"
+    startCommand: "uvicorn app:app --host 0.0.0.0 --port $PORT"
     envVars:
       - key: LIVEKIT_API_KEY
         sync: false
@@ -15,26 +15,7 @@ services:
         sync: false
       - key: CEREBRAS_API_KEY
         sync: false
-      - key: PYTHON_VERSION
-        value: 3.11
-
-  # The Background Worker for the AI Agent
-  - type: worker
-    name: ai-agent-worker
-    env: python
-    rootDir: backend
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "python main.py start"
-    envVars:
-      - key: LIVEKIT_API_KEY
-        sync: false
-      - key: LIVEKIT_API_SECRET
-        sync: false
-      - key: CARTESIA_API_KEY
-        sync: false
-      - key: CEREBRAS_API_KEY
-        sync: false
-      - key: LIVEKIT_URL
+      - key: LIVEKIT_URL # The wss://... URL for your LiveKit project
         sync: false
       - key: PYTHON_VERSION
         value: 3.11
